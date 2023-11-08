@@ -46,4 +46,4 @@ python feedback_submission.py
     
 ## Contributing
 
-If you wish to contribute to this project, please fork the repository and submit a pull request.   
+If you wish to contribute to this project, please fork the repository and submit a pull request.      
