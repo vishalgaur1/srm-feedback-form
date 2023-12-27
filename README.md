@@ -1,4 +1,4 @@
-# Feedback Submission Automation Script
+# Feedback Submission Automation Script (FIRST READ THEN RUN)
 
 ## Description
 This script is designed to automate the process of submitting feedback forms for SRMIST's academia website. It uses a combination of Python libraries to interact with web elements and automate keyboard inputs to fill out the feedback form based on user input.
