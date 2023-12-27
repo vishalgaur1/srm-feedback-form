@@ -14,53 +14,58 @@ def submit_form(event=None):  # Add event=None as a parameter
     labs = int(lab_entry.get())
     comment = comment_entry.get()
 
- 
-
     # Initialize Chrome WebDriver
     option = webdriver.ChromeOptions()
     option.add_argument("start-maximized")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=option)
     driver.get("https://academia.srmist.edu.in/#Course_Feedback")
     time.sleep(3)
-    pyautogui.press("tab")
+
+    # Enter Email and press Enter
     for key in email:
         pyautogui.press(key)
     pyautogui.press("enter")
     time.sleep(3)
+
+    # Enter Password and press Enter
     for key in password:
         pyautogui.press(key)
     pyautogui.press("enter")
 
     time.sleep(30)
-    pyautogui.press("tab")
-    pyautogui.press("tab")
+
+    # Enter Theory Feedback
     for i in range(theory):
         for j in range(14):
             if j == 0:
-                pyautogui.press("tab")
                 pyautogui.press("tab")
             pyautogui.press("tab")
             pyautogui.press("enter")
             time.sleep(3)
             pyautogui.press("down")
             pyautogui.press("enter")
+
         pyautogui.press("tab")
         for key in comment:
             pyautogui.press(key)
+
+    # Enter Lab Feedback
     pyautogui.press("tab")
     for i in range(labs):
         for j in range(13):
             if j == 0:
                 pyautogui.press("tab")
-                pyautogui.press("tab")
             pyautogui.press("tab")
             pyautogui.press("enter")
             time.sleep(3)
             pyautogui.press("down")
             pyautogui.press("enter")
+
         pyautogui.press("tab")
         for key in comment:
             pyautogui.press(key)
+
+    # Submit Feedback
     pyautogui.press("tab")
     pyautogui.press("tab")
     pyautogui.press("enter")
